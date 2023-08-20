@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital clock</title>
+
+    <style>
+        body{
+            background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+        }
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+#box
+{display: flex;
+    justify-content: center;
+    align-items: center;
+    width:20rem;
+    height: 5rem;
+    font-size: xx-large;
+    font-weight: 600;
+    color: rgb(31, 99, 74);
+    border-radius: 2rem  0 2rem 0;
+    background-color: transparent;
+  box-shadow: 0 4px 8px rgba(27, 24, 24, 0.868);
+}
+#box:hover{
+    transform: Y(-15x);
+    cursor: pointer;
+    
+}
+    </style>
+
+<script>
+    function call()
+    {
+        setInterval(()=>{
+var cd=new Date()
+
+box.innerHTML=`${cd.getHours()}: ${cd.getMinutes()}: ${cd.getSeconds()}`
+console.log(cd.getHours())
+
+        },1000)
+        
+    } 
+    </script>
+</head>
+<body onload="call()">
+    
+
+    <div class="container">
+<div id="box"></div>
+    </div>
+
+    
+    
+</body>
+</html>
